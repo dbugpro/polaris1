@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>Polaris v1</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -33,7 +33,11 @@
       }
     </script>
     <style>
-      body {
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* App handles scrolling */
         background-color: #020617; /* slate-950 */
         color: #f8fafc;
       }
@@ -71,7 +75,7 @@
 </script>
 </head>
   <body>
-    <div id="root"></div>
+    <div id="root" style="height: 100%"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
